@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 
 const Dashboard = () => {
@@ -20,7 +20,7 @@ const Dashboard = () => {
     }
   };
 
-  const fetchDashboardData = async () => {
+  const fetchDashboardData = useCallback(async () => {
     try {
       const res = await axios.get("http://localhost:5000/api/dashboard", {
         params: {
@@ -36,12 +36,15 @@ const Dashboard = () => {
       console.error("Dashboard error:", err);
       setError("Error loading dashboard data");
     }
-  };
+  }, [baseId, fromDate, toDate, equipmentType]);
 
   useEffect(() => {
     fetchEquipmentTypes();
+  }, []);
+
+  useEffect(() => {
     fetchDashboardData();
-  }, [baseId, fromDate, toDate, equipmentType]);
+  }, [fetchDashboardData]);
   
   return (
   <div

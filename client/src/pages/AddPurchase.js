@@ -36,7 +36,7 @@ const AddPurchase = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/api/purchases", form);
+      await axios.post("http://localhost:5000/api/purchases", form);
       alert("Purchase added successfully");
       setForm({ base_id: "", asset_id: "", quantity: "", purchase_date: "" });
       setError(null);
