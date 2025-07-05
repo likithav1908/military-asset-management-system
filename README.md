@@ -95,9 +95,6 @@ expenditures
 
 Refer to server/db.js and migration SQL files if available.
 
-📸 Screenshots (Optional)
-You can add UI screenshots or DB diagrams here
-
 📈 Future Enhancements
 🔐 Add login/signup and authentication
 
