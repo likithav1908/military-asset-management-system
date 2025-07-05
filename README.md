@@ -45,30 +45,25 @@ Military-Asset-Management-System/
 ├── .env # Environment variables
 ├── README.md
 
-yaml
-Copy code
 
 ---
 
 ## 🚀 How to Run the Project
 
 ### 1️⃣ Backend Setup (Express + PostgreSQL)
-```bash
+
 cd server
 npm install
 🔧 Configure .env with your DB URL:
 
 ini
-Copy code
+
 DATABASE_URL=your_postgres_connection_string
 Then run:
 
-bash
-Copy code
 node server.js
 2️⃣ Frontend Setup (React)
-bash
-Copy code
+
 cd client
 npm install
 npm start
